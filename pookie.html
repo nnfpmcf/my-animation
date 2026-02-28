@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Gayatri Pookie ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #fff5f7 0%, #ffdee9 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Initial Button */
+        #start-btn {
+            padding: 25px 50px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        #start-btn:hover { transform: scale(1.1); }
+        .hidden { display: none !important; }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Cake Section */
+        .cake {
+            position: relative;
+            width: 100px;
+            height: 60px;
+            margin-bottom: 80px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .layer { position: absolute; width: 100px; height: 30px; border-radius: 5px; }
+        .layer-bottom { background: #7b5e57; bottom: 0; }
+        .layer-top { background: #ff85a1; bottom: 25px; }
+        .candle { position: absolute; width: 6px; height: 25px; background: #fff; top: 5px; left: 47px; }
+        .flame { position: absolute; width: 10px; height: 15px; background: #ffcc00; top: -12px; left: -2px; border-radius: 50%; animation: flicker 0.1s infinite; }
+
+        /* Enhanced Big Heart */
+        .heart {
+            background-color: #ff1493;
+            height: 450px; /* Bigger heart for the long message */
+            width: 450px;
+            position: relative;
+            transform: rotate(-45deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 60px rgba(255, 20, 147, 0.4);
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        .heart:before, .heart:after {
+            content: "";
+            background-color: #ff1493;
+            border-radius: 50%;
+            height: 450px;
+            position: absolute;
+            width: 450px;
+        }
+        .heart:before { top: -225px; left: 0; }
+        .heart:after { left: 225px; top: 0; }
+
+        /* Text Content */
+        .wish-text {
+            transform: rotate(45deg);
+            color: white;
+            z-index: 10;
+            text-align: center;
+            width: 380px;
+            max-height: 380px;
+            overflow-y: auto; /* Allows scrolling if text is too long */
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .wish-text h2 { font-size: 28px; margin-bottom: 10px; }
+        
+        /* Hide scrollbar for aesthetic */
+        .wish-text::-webkit-scrollbar { display: none; }
+
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes heartbeat { 0%, 100% { scale: 1; } 50% { scale: 1.03; } }
+        @keyframes flicker { 0% { opacity: 0.8; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <button id="start-btn" onclick="celebrate()">CLICK HERE</button>
+
+    <div id="container" class="hidden">
+        <div class="cake">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="layer layer-top"></div>
+            <div class="layer layer-bottom"></div>
+        </div>
+
+        <div class="heart">
+            <div class="wish-text">
+                <h2>Happy Birthday, Gayatri Pookie! ✨</h2>
+                I wanted to do something a little different this year because a simple text message just didn't feel like enough for someone as amazing as you. You aren’t just a friend; you’re that constant spark of joy and the person who makes everything a little bit brighter just by being there.<br><br>
+                Looking back at all our memories, I realized how lucky I am to have you in my life. You have this incredible way of making people feel seen and happy, and today, I want all of that energy to come right back to you. I hope this new year of your life is filled with the kind of laughter that makes your stomach hurt and enough 'pookie' moments to last a lifetime.<br><br>
+                You deserve the world and more—all the cake, all the gifts, and all the love. Stay exactly as wonderful, kind, and unique as you are. I hope when you clicked that button and saw the heart, it made you smile. Happy Birthday! ❤️
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function celebrate() {
+            document.getElementById('start-btn').classList.add('hidden');
+            document.getElementById('container').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
